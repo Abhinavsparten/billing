@@ -1,0 +1,220 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 0.5rem; 
+    overflow-x: hidden;
+}
+
+
+.container {
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    max-width: 1400px;
+}
+
+p {
+    color: #888888;
+    margin-top: 0.5rem;
+}
+
+hr {
+    font-size: xx-small; 
+    margin-bottom: 1rem; 
+    color: #ffffff;
+    border-top: 0.5px solid #ddd;
+}
+
+/* Form Container */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem; 
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    width: 100%;
+    margin-bottom: 0.8rem; 
+    gap: 8px; 
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-right: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    padding: 0.3rem;
+    position: relative;
+}
+
+input {
+    margin-top: 0.4rem; 
+    background-color: #f6f6f6;
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 0.85rem; 
+}
+
+.section-title {
+    font-size: 1rem; 
+    font-weight: 600;
+    margin-bottom: 0.3rem; 
+}
+
+.input {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.85rem; 
+    margin-bottom: 8px; 
+}
+
+.select, .input {
+    width: 100%;
+    font-size: 0.85rem; 
+}
+
+#card-number {
+    padding-right: 50px; 
+    background: url('https://i.postimg.cc/XJg3z2Nw/1-Mastercard-Logo.png') no-repeat left center;
+    background-size: 30px 30px; 
+    padding-left: 10px; 
+    height: 40px; 
+    border: 1px solid #ccc; 
+    
+  }
+
+/* Submit Button */
+.submit-btn {
+    background-color: #f6f6f6;
+    padding: 10px 20px; 
+    border: 0.5px solid rgb(222, 222, 221);
+    border-radius: 6px;
+    cursor: pointer;
+    width: 180px; 
+    font-size: 0.85rem;
+    color: #656565;
+}
+
+.submit-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px; 
+}
+
+.submit-btn:hover {
+    background-color: rgb(62, 100, 215);
+    color: white;
+}
+
+.two .input-field {
+    width: 48%; 
+}
+
+.two {
+    display: flex;
+    justify-content: space-between;
+    gap: 3%; 
+}
+
+
+.city-state-zip .input-field {
+    width: 28%;
+}
+
+.city-state-zip {
+    display: flex;
+    justify-content: space-between;
+    gap: 2%;
+}
+.states{
+    margin-top: 0.4rem;
+}
+
+
+  
+  
+
+/* For tablets */
+@media (max-width: 768px) {
+    .container {
+        padding: 0.5rem; 
+    }
+
+    .form-row {
+        grid-template-columns: 1fr; 
+    }
+
+    .two .input-field {
+        width: 100%;
+    }
+
+    .city-state-zip .input-field {
+        width: 100%; 
+    }
+
+    .submit-btn-container {
+        justify-content: center;
+    }
+
+    .section-title {
+        font-size: 1rem; 
+    }
+
+    .container {
+        margin: 0.5rem;
+    }
+}
+
+/* For smaller mobile screens */
+@media (max-width: 480px) {
+    body {
+        padding: 0;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .input,
+    .select {
+        padding: 0.5rem; 
+    }
+
+    .section-title {
+        font-size: 1rem; 
+    }
+
+    .form-row {
+        grid-template-columns: 1fr; 
+    }
+
+    .input-group {
+        width: 100%;
+    }
+
+    .submit-btn {
+        width: 100%;
+        font-size: 0.75rem; 
+    }
+}

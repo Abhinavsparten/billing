@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Billing information</h2>
+        <p>Update your billing details and address</p>
+        <form>
+          <!-- Payment details row -->
+          <div class="form-row">
+         
+            <div class="label">
+              <h3 class="section-title">Payment details</h3>
+            </div>
+          
+            <div class="input-group">
+              <div class="input-field">
+                <label for="card-number"  class="label">Card number</label>
+                <input type="text" required id="card-number" class="input"
+                pattern="^\d{4} \d{4} \d{4} \d{4}$" placeholder="1234 1234 1234 1234" />
+              </div>
+              <div class="input-field">
+                <label for="cardholder-name" class="label">Cardholder name</label>
+                <input type="text" required id="cardholder-name" class="input"
+                 placeholder="Full name on card" />
+              </div>
+              <div class="two">
+              <div class="input-field">
+                <label for="expiry" class="label">Expiry</label>
+                <input type="text" required id="expiry" class="input" placeholder="MM/YY" 
+                pattern="^(0[1-9]|1[0-2])\/[0-9]{2}$"/>
+              </div>
+              <div class="input-field">
+                <label for="cvv" class="label">CVV</label>
+                <input type="text" required id="cvv" class="input" placeholder="123"
+                pattern="^\d{3}$" />
+              </div>
+            </div>
+            </div>
+          </div>
+          <hr></hr>
+      
+          <!-- Email address row -->
+          <div class="form-row">
+            <div class="label">
+              <h3 class="section-title">Email address</h3>
+            </div>
+            <div class="input-group">
+              <div class="input-field">
+                <label for="email" class="label">Email</label>
+                <input type="email" required id="email" class="input" placeholder="user@example.com" />
+              </div>
+            </div>
+          </div>
+          <hr></hr>
+          <!-- Address details row -->
+          <div class="form-row">
+            <div class="label">
+                <h3 class="section-title">Address details</h3>
+            </div>
+            <div class="input-group">
+                <div class="input-field">
+                    <label for="country" class="label">Country / Region</label>
+                    <select required id="country" class="input">
+                        <option value="">Select a Country</option>
+                        <option value="unitedStates">United States</option>
+                        <option value="canada">Canada</option>
+                        <option value="india">India</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <label for="address" class="label">Address</label>
+                    <input type="text" required id="address" class="input" placeholder="Street address" />
+                </div>
+                <div class="input-field">
+                    <label for="apartment" class="label">Apartment, suite, etc. (optional)</label>
+                    <input type="text" id="apartment" class="input" placeholder="Apartment, suite, etc. (optional)" />
+                </div>
+                <div class="city-state-zip">
+                    <div class="input-field">
+                        <label for="city" class="label">City</label>
+                        <input type="text" required id="city" class="input" placeholder="City" />
+                    </div>
+                    <div class="input-field ">
+                        <label for="state" class="label">State</label>
+                        <select required id="state" class="input states">
+                            <option value="">Select State</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label for="zip" class="label">Zip</label>
+                        <input type="text" required id="zip" class="input" placeholder="12345" 
+                        pattern="^\d{5}(-\d{4})?$"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+         <!-- submit button -->
+          <div class="submit-btn-container">
+            <button type="submit" class="submit-btn">Save changes</button>
+          </div>
+        </form>
+      </div>
+      <script src="script.js"></script>
+</body>
+</html>
