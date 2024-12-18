@@ -96,13 +96,21 @@ input {
 
 #card-number {
     padding-right: 50px; 
+    padding-left: 40px; 
     background: url('https://i.postimg.cc/XJg3z2Nw/1-Mastercard-Logo.png') no-repeat left center;
-    background-size: 30px 30px; 
-    padding-left: 10px; 
-    height: 40px; 
-    border: 1px solid #ccc; 
+    background-size: 40px 30px; 
+    background-color: #f6f6f6;
+    height: 40px;
+    border: 1px solid #ccc;
+    font-size: 16px;
     
-  }
+}
+
+#card-number::placeholder {
+    color: #aaa; 
+    padding-left: 0; 
+    font-size: 16px; 
+}
 
 /* Submit Button */
 .submit-btn {
@@ -113,7 +121,7 @@ input {
     cursor: pointer;
     width: 180px; 
     font-size: 0.85rem;
-    color: #656565;
+    color: #3f3f3f;
 }
 
 .submit-btn-container {
@@ -151,9 +159,12 @@ input {
     margin-top: 0.4rem;
 }
 
+.error-message {
+    color: red;
+    font-size: 0.9em;
+  }
 
-  
-  
+
 
 /* For tablets */
 @media (max-width: 768px) {
@@ -173,9 +184,6 @@ input {
         width: 100%; 
     }
 
-    .submit-btn-container {
-        justify-content: center;
-    }
 
     .section-title {
         font-size: 1rem; 
@@ -214,7 +222,7 @@ input {
     }
 
     .submit-btn {
-        width: 100%;
         font-size: 0.75rem; 
+        margin-right: 1rem;
     }
 }
